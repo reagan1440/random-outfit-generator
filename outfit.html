@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Outfit Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #outfit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #924545;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #outfit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #8f7f7f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #3f919a;
+            color: #0f0e10;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #507b80;
+        }
+    
+
+
+    </style>
+</head>
+<body>
+    <h1>Random Outfit Generator</h1>
+
+    <div id="outfit">
+        <p id="top">Top: </p>
+        <p id="bottom">Bottom: </p>
+        <p id="shoes">Shoes: </p>
+        <p id="sweatshirt">Sweatshirt: </p>
+    </div>
+
+    <button onclick="generateOutfit()">Generate Outfit</button>
+
+    <script>
+        const tops = ["you looked better tee", "chicago", "detroit", "UGA", "cats suck saloon","northface x onlince ceramics","pearl jam","vancouver","USA gold cup","GaTech final 4","nike ath","gramicci blue","edisto","astros","ga tech 90s","braves","robot chicken","life is good","gramicci white","fl light houses","whatever tee","veggie tales","90s fb champs","fisherman","windy hill farms","tech vs wv"," calvin and hobbes","hbo cinemax","guiness","delta","alaska","Ga outdoors","mac programming","walmart","edmonton canada","carhartt","stussy greem","camo","grey nike","batman","90s yoyo","dr seuss","baghdad running club","atl U","stanford","olympics","red nike","operation","bonnaroo"];
+        const bottoms = ["levi jeans", "carhartt pants", "ripped jeans", "black sweats","grey sweats","blue sweats","brown sweats","jorts"];
+        const shoes = ["adidas rivalry low", "NB 550 green", "NB 550 blue", "Stussy converse","Jordan 4's","Jordan 1's","reebok club c","NB 2002r","Nike dunk disrupt"];
+        const sweatshirts = ["tech","dolphins","columbia rain jacket","halfzip","beech mtn","budweiser","kennebunkport","cincinnati","portland","save the earth","wyoming","navy russel","maiden athletics","yosemite","green carhartt","AEO","N nike","columbia","ohio state","marlboro"];
+
+        function getRandomItem(array) {
+            const randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
+        }
+
+        function generateOutfit() {
+            const top = getRandomItem(tops);
+            const bottom = getRandomItem(bottoms);
+            const shoe = getRandomItem(shoes);
+            const sweatshirt = getRandomItem(sweatshirts);
+
+            document.getElementById("top").textContent = `Top: ${top}`;
+            document.getElementById("bottom").textContent = `Bottom: ${bottom}`;
+            document.getElementById("shoes").textContent = `Shoes: ${shoe}`;
+            document.getElementById("sweatshirt").textContent = `Sweatshirt: ${sweatshirt}`;
+        }
+    </script>
+</body>
+</html>

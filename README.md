@@ -1,1 +1,2 @@
 # random-outfit-generator
+this is a fun personal projected i created using clothes i own to randomly generate me an outfit out of my shirts, sweatshirts, pants, and shoes and it is the first website i built.
